@@ -2,6 +2,8 @@ import { DateTime } from './node_modules/luxon/src/luxon.js';
 import BookManager from './modules/bookManager.js';
 import removeBookWrapper from './modules/eventHandlers.js';
 
+const bookManager = new BookManager();
+
 const loadData = () => {
   bookManager.loadData();
 }
@@ -9,8 +11,6 @@ const loadData = () => {
 const lst = document.getElementById('lst');
 const cont = document.getElementById('cont');
 const addBo = document.getElementById('addNew');
-
-const bookManager = new BookManager();
 
 const displayDate = () => {
   const now = DateTime.local();
