@@ -8,8 +8,6 @@ Hello, I am Marco Díaz
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-  - [🔭 Video Presentation](#video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -65,21 +63,6 @@ GitHub & Visual Studio Code
 - Import it as a module.
 - See the article Get the current date and time. Your task here is to use a new tool effectively with little -
 - externally curated support. Exactly as you will do in your future job.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://marcodiaz2000.github.io/Awesome-books-with-ES6/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 🔭 Video Presentation <a name="video"></a>
-
-- [Video Presentation](#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
