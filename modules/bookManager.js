@@ -1,6 +1,6 @@
-import { Book } from './book.js';
+import Book from './book.js';
 
-export class BookManager {
+export default class BookManager {
     static createBookElement = (book) => `
         <tr id="${book.id}">
           <td class="book-info"> "${book.title}" by ${book.author}</td>
@@ -8,7 +8,7 @@ export class BookManager {
             <button type="button" onclick="removeBookWrapper('${book.id}')">Remove</button>
           </td>
         </tr>`;
-  
+
     loadData = () => {
       const tbody = document.querySelector('tbody');
       const books = JSON.parse(localStorage.getItem('books')) || [];
@@ -17,7 +17,7 @@ export class BookManager {
         tbody.innerHTML += BookManager.createBookElement(book);
       });
     };
-  
+
     addBook = () => {
       this.title = document.getElementById('title').value;
       const author = document.getElementById('author').value;
@@ -30,17 +30,17 @@ export class BookManager {
       localStorage.setItem('books', JSON.stringify(books));
       alert('Data inserted successfully');
     };
-  
+
     removeBook = (id) => {
       const tbody = document.querySelector('tbody');
       const book = document.getElementById(id);
       tbody.removeChild(book);
-  
+
       const books = JSON.parse(localStorage.getItem('books')) || [];
       const updatedBooks = books.filter((bookData) => bookData.id !== id);
       localStorage.setItem('books', JSON.stringify(updatedBooks));
     };
-  
+
     list1 = () => {
       this.title = document.getElementById('title').value;
       document.getElementById('bookListId').classList.add('bookList');
@@ -50,7 +50,7 @@ export class BookManager {
       document.getElementById('addNewID').classList.remove('lstClass');
       document.getElementById('addNewID').classList.add('noLstClass');
     };
-  
+
     cnt = () => {
       this.title = document.getElementById('title').value;
       document.getElementById('wrapId').classList.remove('wrap');
@@ -60,7 +60,7 @@ export class BookManager {
       document.getElementById('bookListId').classList.remove('bookList');
       document.getElementById('bookListId').classList.add('nobookList');
     };
-  
+
     addBook1 = () => {
       this.title = document.getElementById('title').value;
       document.getElementById('wrapId').classList.remove('nowrap');
@@ -70,4 +70,4 @@ export class BookManager {
       document.getElementById('bookListId').classList.remove('bookList');
       document.getElementById('bookListId').classList.add('nobookList');
     };
-  }
+}

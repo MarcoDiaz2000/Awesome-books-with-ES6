@@ -1,8 +1,6 @@
 import { DateTime } from './node_modules/luxon/src/luxon.js';
-import { BookManager } from './modules/bookManager.js';
-import { removeBookWrapper } from './modules/eventHandlers.js';
-
-window.loadData = loadData;
+import BookManager from './modules/bookManager.js';
+import removeBookWrapper from './modules/eventHandlers.js';
 
 const lst = document.getElementById('lst');
 const cont = document.getElementById('cont');
@@ -11,13 +9,13 @@ const addBo = document.getElementById('addNew');
 const bookManager = new BookManager();
 
 function displayDate() {
-    const now = DateTime.local();
-    const mexicoDate = DateTime.fromObject(
-      { year: now.year, month: now.month, day: now.day, hour: now.hour, minute: now.minute },
-      { zone: 'America/Mexico_City' }
-    );
-    document.getElementById('currentDate').textContent = mexicoDate.toLocaleString(DateTime.DATETIME_FULL);
-  }
+  const now = DateTime.local();
+  const mexicoDate = DateTime.fromObject(
+    { year: now.year, month: now.month, day: now.day, hour: now.hour, minute: now.minute },
+    { zone: 'America/Mexico_City' }
+  );
+  document.getElementById('currentDate').textContent = mexicoDate.toLocaleString(DateTime.DATETIME_FULL);
+}
 
 setInterval(displayDate, 1000);
 
@@ -38,6 +36,8 @@ addBo.addEventListener('click', () => {
 function loadData() {
   bookManager.loadData();
 }
+
+window.loadData = loadData;
 
 window.removeBookWrapper = (id) => removeBookWrapper(bookManager, id);
 
