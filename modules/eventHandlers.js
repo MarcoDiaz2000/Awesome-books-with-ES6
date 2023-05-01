@@ -1,3 +1,5 @@
-export default function removeBookWrapper(bookManager, id) {
+const removeBookWrapper = (bookManager, id) => {
   bookManager.removeBook(id);
-}
+};
+
+export default removeBookWrapper;

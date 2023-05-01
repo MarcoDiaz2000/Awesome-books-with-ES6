@@ -2,13 +2,17 @@ import { DateTime } from './node_modules/luxon/src/luxon.js';
 import BookManager from './modules/bookManager.js';
 import removeBookWrapper from './modules/eventHandlers.js';
 
+const loadData = () => {
+  bookManager.loadData();
+}
+
 const lst = document.getElementById('lst');
 const cont = document.getElementById('cont');
 const addBo = document.getElementById('addNew');
 
 const bookManager = new BookManager();
 
-function displayDate() {
+const displayDate = () => {
   const now = DateTime.local();
   const mexicoDate = DateTime.fromObject(
     {
@@ -39,15 +43,13 @@ addBo.addEventListener('click', () => {
   bookManager.addBook1();
 });
 
-function loadData() {
-  bookManager.loadData();
-}
-
-window.loadData = loadData;
-
 window.removeBookWrapper = (id) => removeBookWrapper(bookManager, id);
 
 const addBookButton = document.getElementById('addBookButton');
 addBookButton.addEventListener('click', () => {
   bookManager.addBook();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadData();
 });
