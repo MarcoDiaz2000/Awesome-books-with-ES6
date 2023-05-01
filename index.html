@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome books</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body onload="window.loadData()">
+    <nav id='navBar'>
+        <h1 id="logo">Awesome Books</h1>
+        <ul id="navUl">
+          <li id="lst">List</li>
+          <li id="addNew">Add new</li>
+          <li id="cont">Contact</li>
+        </ul>
+      </nav>
+      <p><span id="currentDate"></span></p>
+    <div class="wrap" id="wrapId">
+        
+        
+        <h1>Add a new box</h1>
+        <form action="" method="get" id="awesomebook">
+            <ul>
+                <li>
+                    <input type="text" id="title" name="title" placeholder="Title" class="box-form"/>
+                </li>
+                <li>
+                    <input type="text" id="author" name="author" placeholder="Author" class="box-form"/>
+                </li>
+                <li class="btn-form">
+                    <button type="button" id="addBookButton">Add</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="lstClass noLstClass" id="addNewID">
+        <h1 class="cntHeading">Contact information</h1>
+        <section class="cntSection">
+        <p class="t16">Do you have any questions or you want to say "Hello"?<br>You can reach out to us</p>
+        <br>
+        <ul>
+            <li class="t16">- Our e-mail mail@mail.com</li>
+            <li class="t16">- Our phone number: 0043586534422</li>
+            <li class="t16">- Our address: Streetname 22, 84503 City, Country</li>
+        </ul>
+    </section>
+    </div>
+    <div class="bookList nobookList" id="bookListId">
+        <div class="center">
+            <h1>All Awesome Book List</h1>
+            <table id="data">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright: By Marco Díaz</p>
+    </footer>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
