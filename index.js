@@ -11,8 +11,14 @@ const bookManager = new BookManager();
 function displayDate() {
   const now = DateTime.local();
   const mexicoDate = DateTime.fromObject(
-    { year: now.year, month: now.month, day: now.day, hour: now.hour, minute: now.minute },
-    { zone: 'America/Mexico_City' }
+    {
+      year: now.year,
+      month: now.month,
+      day: now.day,
+      hour: now.hour,
+      minute: now.minute,
+    },
+    { zone: 'America/Mexico_City' },
   );
   document.getElementById('currentDate').textContent = mexicoDate.toLocaleString(DateTime.DATETIME_FULL);
 }
