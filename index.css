@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  font-weight: bold;
+}
+
+.wrap {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.nowrap {
+  display: none;
+}
+
+h1 {
+  padding: 15px;
+}
+
+li {
+  padding: 15px;
+}
+
+input {
+  border: 4px solid;
+}
+
+button {
+  padding: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+  border: 4px solid #000;
+}
+
+hr {
+  width: 10%;
+  border: none;
+  border-top: 3px solid #000;
+  margin: 20px 0;
+}
+
+.box-form {
+  width: 250px;
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+.btn-form {
+  text-align: right;
+}
+
+.book-info {
+  text-align: left;
+  padding: 10px;
+}
+
+.remove-button {
+  text-align: right;
+  padding: 10px;
+}
+
+#data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#data tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+#navBar {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+#navUl {
+  padding-left: 30px;
+  padding-right: 50px;
+}
+
+#navUl > li {
+  display: inline-block;
+  margin-left: 20px;
+  border-left: 2px solid black;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+}
+
+#navUl > li:first-child {
+  border-left: none;
+}
+
+#logo {
+  display: inline-block;
+}
+
+.t16 {
+  font-size: 18px;
+}
+
+.lstClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.noLstClass {
+  display: none;
+}
+
+.nobookList {
+  display: none;
+}
+
+.cntSection {
+  margin-top: 40px;
+}
+
+footer {
+  padding: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+  margin-top: 100px;
+}
+
+.center {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+}
+
+#currentDate {
+  position: absolute;
+  right: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+}
