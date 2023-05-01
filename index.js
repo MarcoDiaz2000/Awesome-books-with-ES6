@@ -6,7 +6,7 @@ const bookManager = new BookManager();
 
 const loadData = () => {
   bookManager.loadData();
-}
+};
 
 const lst = document.getElementById('lst');
 const cont = document.getElementById('cont');
@@ -25,7 +25,7 @@ const displayDate = () => {
     { zone: 'America/Mexico_City' },
   );
   document.getElementById('currentDate').textContent = mexicoDate.toLocaleString(DateTime.DATETIME_FULL);
-}
+};
 
 setInterval(displayDate, 1000);
 
